@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-import os
 import sys
 import argparse
 from dotenv import load_dotenv
@@ -20,7 +19,7 @@ def main() -> int:
     )
     args = parser.parse_args()
 
-    # 2) Создаём клиента Gemini (v1.x)
+    # 2) Создаём клиента Gemini
     client = genai.Client()
 
     # Модель для использования
@@ -28,7 +27,9 @@ def main() -> int:
 
     config = types.GenerateContentConfig(
         # Устанавливаем температуру. Например, 0.8 для более креативного ответа.
-        temperature=0.8,
+        temperature=0.0,
+        candidate_count=1
+      #  system_instruction="Ты дружелюбный ассистент. Отвечай кратко и по делу."
         # Вы также можете добавить max_output_tokens, top_p и top_k здесь.
     )
 
