@@ -28,8 +28,8 @@ def main() -> int:
     config = types.GenerateContentConfig(
         # Устанавливаем температуру. Например, 0.8 для более креативного ответа.
         temperature=0.0,
-        candidate_count=1
-      #  system_instruction="Ты дружелюбный ассистент. Отвечай кратко и по делу."
+        candidate_count=1,
+        #  system_instruction="Ты дружелюбный ассистент. Отвечай кратко и по делу."
         # Вы также можете добавить max_output_tokens, top_p и top_k здесь.
     )
 

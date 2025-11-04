@@ -14,4 +14,3 @@ chain = prompt | llm | StrOutputParser()
 result = chain.invoke({"topic": "langchain"})
 
 print(result)
-
