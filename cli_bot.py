@@ -15,7 +15,7 @@ logging.basicConfig(
     filename="chat_session.log",
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s",
-    datefmt="%Y-%m-%d %H:%M:%S"
+    datefmt="%Y-%m-%d %H:%M:%S",
 )
 
 logging.info("=== New session ===")
@@ -145,8 +145,7 @@ def main():
 
     # 1. Создание runnable с историей
     conversation_runnable = create_chat_runnable(
-        model_name=MODEL_NAME,
-        system_message=SYSTEM_MESSAGE.format(model_name=MODEL_NAME)
+        model_name=MODEL_NAME, system_message=SYSTEM_MESSAGE.format(model_name=MODEL_NAME)
     )
 
     print("Привет! Я консольный бот. Для выхода напишите «выход», для сброса контекста — «сброс».")
